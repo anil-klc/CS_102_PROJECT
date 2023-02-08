@@ -1,5 +1,6 @@
 package CS_102_PROJECT;
 
+import java.util.*;
 
 public class console_app {
     public static void main(String[] args) {
@@ -16,4 +17,24 @@ public class console_app {
 
         return rand_int_array;
     }
+
+    public void displayMenu(){
+        System.out.print("------------------------------- \n");
+        System.out.print("1-Find the minimum value in the array\n");
+        System.out.print("2-Find the maximum value in the array\n");
+        System.out.print("3-Find the average of the array\n");
+        System.out.print("4-Find the sum of odd indexes in the array\n");
+        System.out.print("5-Find the sum of the even indexes in the array\n");
+        System.out.print("6-Exit");
+        System.out.print("-------------------------------");
+    }
+
+    public int getUserAnswer(){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter your choice;");
+        int returnValue = in.nextInt();
+
+        return returnValue;
+    }
+
 }
