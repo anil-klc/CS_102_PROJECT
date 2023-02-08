@@ -57,25 +57,54 @@ public class console_app {
         return totalSum;
     }
 
-    public void findDifferencesFromAverage()
+    public void findDifferencesFromAverage(int [] array)
     {
+        int array_size= array.length;
         int sum = 0;
-        int average;
+        int average=0;
 
         for(int i = 0; i < array_size ; i++)
         {
-            sum = sum + rand_int_array[i];
-            average = sum / array_size;
+            sum = sum + array[i];
+           
         }
+
+        average = sum / array_size;
 
         int[] diferences_from_average = new int [array_size];
 
         for (int i = 0 ; i < array_size ; i++)
         {
-            diferences_from_average[i] = rand_int_array[i] - average;
+            diferences_from_average[i] =array[i] - average;
         }
 
         System.out.println(diferences_from_average);
     }
+
+
+    public int findMax(int [] array){
+
+        int max = Integer.MIN_VALUE;
+
+        for(int i =0; i<array.length;i++){
+            if(array[i]>=max){
+                max= array[i];
+            }
+        }
+        return max;
+    }
+
+    public int findMin(int [] array){
+
+        int min = Integer.MAX_VALUE;
+
+        for(int i =0; i<array.length;i++){
+            if(array[i]>=min){
+                min= array[i];
+            }
+        }
+        return min;
+    }
+
 
 }
