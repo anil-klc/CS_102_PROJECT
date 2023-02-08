@@ -37,4 +37,24 @@ public class console_app {
         return returnValue;
     }
 
+    public int sumEvens(int[] inputArray){
+        int totalSum = 0;
+        for(int i = 0; i < inputArray.length; i++){
+            if(i%2 == 0){
+                totalSum += inputArray[i];
+            }
+        }
+        return totalSum;
+    }
+
+    public int sumOdds(int[] inputArray){
+        int totalSum = 0;
+        for(int i = 0; i < inputArray.length; i++){
+            if(i%2 != 0){
+                totalSum += inputArray[i];
+            }
+        }
+        return totalSum;
+    }
+
 }
