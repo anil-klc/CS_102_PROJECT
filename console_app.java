@@ -22,7 +22,7 @@ public class console_app {
         System.out.print("------------------------------- \n");
         System.out.print("1-Find the minimum value in the array\n");
         System.out.print("2-Find the maximum value in the array\n");
-        System.out.print("3-Find the average of the array\n");
+        System.out.print("3-Find the differences from the average\n");
         System.out.print("4-Find the sum of odd indexes in the array\n");
         System.out.print("5-Find the sum of the even indexes in the array\n");
         System.out.print("6-Exit");
@@ -35,6 +35,27 @@ public class console_app {
         int returnValue = in.nextInt();
 
         return returnValue;
+    }
+
+    public void findDifferencesFromAverage()
+    {
+        int sum = 0;
+        int average;
+
+        for(int i = 0; i < array_size ; i++)
+        {
+            sum = sum + rand_int_array[i];
+            average = sum / array_size;
+        }
+
+        int[] diferences_from_average = new int [array_size];
+
+        for (int i = 0 ; i < array_size ; i++)
+        {
+            diferences_from_average[i] = rand_int_array[i] - average;
+        }
+
+        System.out.println(diferences_from_average);
     }
 
 }
