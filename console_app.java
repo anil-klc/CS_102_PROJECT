@@ -37,28 +37,24 @@ public class console_app {
         return returnValue;
     }
 
-public int findMax(int[] toFindMax ){
-    int max = Integer.MIN_VALUE;
-    
-    for(int i=0; i<toFindMax.length;i++){
-        if(toFindMax[i]>=max){
-            max = toFindMax[i];
+    public int sumEvens(int[] inputArray){
+        int totalSum = 0;
+        for(int i = 0; i < inputArray.length; i++){
+            if(i%2 == 0){
+                totalSum += inputArray[i];
+            }
         }
+        return totalSum;
     }
-    return max;
-}
 
-public int findMin(int[] toFindMin){
-    int min = Integer.MAX_VALUE;
-    
-    for (int i =0; i< toFindMin.length;i++){
-        if(toFindMin[i]<=min){
-            min=toFindMin[i];
+    public int sumOdds(int[] inputArray){
+        int totalSum = 0;
+        for(int i = 0; i < inputArray.length; i++){
+            if(i%2 != 0){
+                totalSum += inputArray[i];
+            }
         }
+        return totalSum;
     }
-    
-    return min;
-    
-}
 
 }
